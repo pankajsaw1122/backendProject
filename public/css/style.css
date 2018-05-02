@@ -1,0 +1,14 @@
+.line {
+    display: block;
+}
+.font-right {
+    font-size: 16px;
+    padding-left: 24px;
+    font-weight: 700;
+}
+
+.font-left {
+    color: rgb(62, 199, 62);
+    font-size: 18px;
+    font-weight: 500;
+}

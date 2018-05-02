@@ -1,0 +1,513 @@
+<div class="jumbotron">
+    <h1>Welcome to Api Doc</h1>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">upload profile image Api</h4>
+        <p>
+            <span class="font-left"> Description </span>
+        </p>
+        <p> This API is used to upload profile image of user </p>
+        <p>
+            <span class="font-left"> Request Method </span>
+            <span class="font-right"> POST </span>
+        </p>
+        <p>
+            <span class="font-left"> Request URL </span>
+            <span class="font-right"> /uploadImage </span>
+        </p>
+        <p>
+            <span class="font-left"> Input Parameters </span>
+        </p>
+        <form class="form-inline" enctype="multipart/form-data" action="/uploadImage" method="post">
+            <label style="padding: 10px">profileImage:</label>
+            <input type="file" name="profileImage">
+            <span style="padding: 10px">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </span>
+        </form>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="card">   
+        <div class="card-body">
+            <h4 class="card-title">register User Api</h4>
+            <p>
+                <span class="font-left"> Description </span>
+            </p>
+            <p> This API is used to register user </p>
+            <p>
+                <span class="font-left"> Request Method </span>
+                <span class="font-right"> POST </span>
+            </p>
+            <p>
+                <span class="font-left"> Request URL </span>
+                <span class="font-right"> /addUser </span>
+            </p>
+            <p>
+                <span class="font-left"> Input Parameters </span>
+            </p>
+            <form class="form-inline" action="/adduser" method="post">
+                <label style="padding: 10px">userName:</label>
+                <input type="text" name="userName">
+
+                <label style="padding: 10px">userEmail:</label>
+                <input type="email" name="userEmail">
+
+                <label style="padding: 10px">userPassword:</label>
+                <input type="password" name="userPassword">
+
+                <label style="padding: 10px">contact:</label>
+                <input type="number" name="contact">
+
+                <label style="padding: 10px">workingAt:</label>
+                <input type="text" name="workingAt">
+
+                <label style="padding: 10px">qualification:</label>
+                <input type="text" name="qualification">
+
+                <label style="padding: 10px">studiedAt:</label>
+                <input type="text" name="studiedAt">
+
+                <label style="padding: 10px">livesIn:</label>
+                <input type="text" name="livesIn">
+
+                <label style="padding: 10px">profileImageId:</label>
+                <input type="text" name="profileImageId">
+
+                <span style="padding: 10px">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </span>
+            </form>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">user Login Api</h4>
+            <p>
+                <span class="font-left"> Description </span>
+            </p>
+            <p> This API is used to login user </p>
+            <p>
+                <span class="font-left"> Request Method </span>
+                <span class="font-right"> POST </span>
+            </p>
+            <p>
+                <span class="font-left"> Request URL </span>
+                <span class="font-right"> /userLogin </span>
+            </p>
+            <p>
+                <span class="font-left"> Input Parameters </span>
+            </p>
+            <form class="form-inline" action="/userLogin" method="post">
+
+                <label style="padding: 10px">userEmail:</label>
+                <input type="email" name="userEmail">
+
+                <label style="padding: 10px">userPassword:</label>
+                <input type="password" name="userPassword">
+
+                <span style="padding: 10px">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </span>
+            </form>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Ask question Api </h4>
+            <p>
+                <span class="font-left"> Description </span>
+            </p>
+            <p> This API is used to ask question</p>
+            <p>
+                <span class="font-left"> Request Method </span>
+                <span class="font-right"> POST </span>
+            </p>
+            <p>
+                <span class="font-left"> Request URL </span>
+                <span class="font-right"> /ask </span>
+            </p>
+            <p>
+                <span class="font-left"> Input Parameters </span>
+            </p>
+            <form class="form-inline" action="/ask" method="post">
+                <div class="form-group">
+                     <label>questionText: </label>
+                   <textarea class="form-control" rows="3" col="10" name="questionText"></textarea>
+                </div>
+                <div class="form-group">
+                    <label> askedBy: </label>
+                    <input type="text" class="form-control" placeholder="_id" name="askedBy">
+                </div>
+                <span style="padding: 10px">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </span>
+            </form>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">edit question Api </h4>
+            <p>
+                <span class="font-left"> Description </span>
+            </p>
+            <p> This API is used to edit question</p>
+            <p>
+                <span class="font-left"> Request Method </span>
+                <span class="font-right"> POST </span>
+            </p>
+            <p>
+                <span class="font-left"> Request URL </span>
+                <span class="font-right"> /editquestion </span>
+            </p>
+            <p>
+                <span class="font-left"> Input Parameters </span>
+            </p>
+            <form class="form-inline" action="/editquestion" method="post">
+             <div class="form-group">
+                     <label style="padding: 10px">questionId: </label>
+                   <input type="text" class="form-control" placeholder="_id" name="questionId">
+                </div>
+                <div class="form-group">
+                     <label style="padding: 10px">userId: </label>
+                   <input type="text" class="form-control" placeholder="_id" name="userId">
+                </div>
+                <div class="form-group">
+                     <label style="padding: 10px">updatedQuestionText: </label>
+                   <textarea class="form-control" rows="3" col="10" name="updatedQuestionText"></textarea>
+                </div>
+
+                <span style="padding: 10px">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </span>
+            </form>
+        </div>
+    </div>
+
+<div class="card">
+        <div class="card-body">
+            <h4 class="card-title">delete question Api </h4>
+            <p>
+                <span class="font-left"> Description </span>
+            </p>
+            <p> This API is used to delete question</p>
+            <p>
+                <span class="font-left"> Request Method </span>
+                <span class="font-right"> POST </span>
+            </p>
+            <p>
+                <span class="font-left"> Request URL </span>
+                <span class="font-right"> /deletequestion </span>
+            </p>
+            <p>
+                <span class="font-left"> Input Parameters </span>
+            </p>
+            <form class="form-inline" action="/deletequestion" method="post">
+             <div class="form-group">
+                     <label style="padding: 10px">userId: </label>
+                   <input type="text" class="form-control" placeholder="_id" name="userId">
+                </div>
+                <div class="form-group">
+                     <label style="padding: 10px">questionId: </label>
+                   <input type="text" class="form-control" placeholder="_id" name="questionId">
+                </div>
+
+                <span style="padding: 10px">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </span>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">post answer Api</h4>
+            <p>
+                <span class="font-left"> Description </span>
+            </p>
+            <p> This API is used to answer question </p>
+            <p>
+                <span class="font-left"> Request Method </span>
+                <span class="font-right"> POST </span>
+            </p>
+            <p>
+                <span class="font-left"> Request URL </span>
+                <span class="font-right"> /answer </span>
+            </p>
+            <p>
+                <span class="font-left"> Input Parameters </span>
+            </p>
+            <form class="form-inline" action="/answer" method="post">
+            <div class="form-group">
+                    <label style="padding: 10px">questionId: </label>
+                    <input type="text" class="form-control" palceholder="_id" name="questionId">
+                </div>
+            <div class="form-group">
+                    <label style="padding: 10px"> AnswerText: </label>
+                    <textarea type="text" rows="4" cols="30" class="form-control" name="answerText"></textarea>
+                </div>
+                <div class="form-group">
+                    <label style="padding: 10px">answeredBy: </label>
+                    <input type="text" class="form-control" palceholder="_id" name="answeredBy">
+                </div>
+                <span style="padding: 10px">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </span>
+            </form>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">edit answer Api</h4>
+            <p>
+                <span class="font-left"> Description </span>
+            </p>
+            <p> This API is used to answer question </p>
+            <p>
+                <span class="font-left"> Request Method </span>
+                <span class="font-right"> POST </span>
+            </p>
+            <p>
+                <span class="font-left"> Request URL </span>
+                <span class="font-right"> /editanswer </span>
+            </p>
+            <p>
+                <span class="font-left"> Input Parameters </span>
+            </p>
+            <form class="form-inline" action="/editanswer" method="post">
+            <div class="form-group">
+                    <label style="padding: 10px">answerId: </label>
+                    <input type="text" class="form-control" palceholder="_id" name="answerId">
+                </div>
+            <div class="form-group">
+                    <label style="padding: 10px"> updatedAnswerText: </label>
+                    <textarea type="text" rows="4" cols="30" class="form-control" name="updatedAnswerText"></textarea>
+                </div>
+                <div class="form-group">
+                    <label style="padding: 10px">userId: </label>
+                    <input type="text" class="form-control" palceholder="_id" name="userId">
+                </div>
+                <span style="padding: 10px">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </span>
+            </form>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">delete answer Api</h4>
+            <p>
+                <span class="font-left"> Description </span>
+            </p>
+            <p> This API is used to delete answer and corresponding comments on answer </p>
+            <p>
+                <span class="font-left"> Request Method </span>
+                <span class="font-right"> POST </span>
+            </p>
+            <p>
+                <span class="font-left"> Request URL </span>
+                <span class="font-right"> /deleteanswer </span>
+            </p>
+            <p>
+                <span class="font-left"> Input Parameters </span>
+            </p>
+            <form class="form-inline" action="/deleteanswer" method="post">
+            <div class="form-group">
+                    <label style="padding: 10px">answerId: </label>
+                    <input type="text" class="form-control" palceholder="_id" name="answerId">
+                </div>
+                <div class="form-group">
+                    <label style="padding: 10px">userId: </label>
+                    <input type="text" class="form-control" palceholder="_id" name="userId">
+                </div>
+                <span style="padding: 10px">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </span>
+            </form>
+        </div>
+    </div>
+
+     <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">comment on answer Api</h4>
+            <p>
+                 <span class="font-left"> Description </span>
+            </p>
+            <p> This API is used to comment on answer</p>
+            <p>
+                <span class="font-left"> Request Method </span>
+                <span class="font-right"> POST </span>
+            </p>
+            <p>
+                <span class="font-left"> Request URL </span>
+                <span class="font-right"> /comment </span>
+            </p>
+            <p>
+                <span class="font-left"> Input Parameters </span>
+            </p>
+            <form class="form-inline" action="/comment" method="post">
+                <div class="form-group">
+                    <label style="padding: 10px">answerId: </label>
+                    <input type="text" class="form-control" name="answerId">
+                </div>
+                <div class="form-group">
+                    <label style="padding: 10px">commentText:</label>
+                    <input type="text" class="form-control" name="commentText">
+                </div>
+                <div class="form-group">
+                    <label style="padding: 10px">commentedBy:</label>
+                    <input type="text" class="form-control" name="commentedBy">
+                </div>
+                <span style="padding: 10px">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </span>
+            </form>
+        </div>
+    </div>
+
+     <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">edit comment Api</h4>
+            <p>
+                <span class="font-left"> Description </span>
+            </p>
+            <p> This API is used to edit comment</p>
+            <p>
+                <span class="font-left"> Request Method </span>
+                <span class="font-right"> POST </span>
+            </p>
+            <p>
+                <span class="font-left"> Request URL </span>
+                <span class="font-right"> /editcomment </span>
+            </p>
+            <p>
+                <span class="font-left"> Input Parameters </span>
+            </p>
+            <form class="form-inline" action="/editcomment" method="post">
+                <div class="form-group">
+                    <label>userId:</label>
+                    <input type="text" class="form-control" name="userId">
+                </div>
+                <div class="form-group">
+                    <label> commentId:</label>
+                    <input type="text" class="form-control" name="commentId">
+                </div>
+                <div class="form-group">
+                    <label> updatedCommentText:</label>
+                    <input type="text" class="form-control" name="updatedCommentText">
+                </div>
+                <span style="padding: 10px">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </span>
+            </form>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">delete comment Api</h4>
+            <p>
+                <span class="font-left"> Description </span>
+            </p>
+            <p> This API is used to delete answers and its corresponding comments</p>
+            <p>
+                <span class="font-left"> Request Method </span>
+                <span class="font-right"> POST </span>
+            </p>
+            <p>
+                <span class="font-left"> Request URL </span>
+                <span class="font-right"> /deletecomment </span>
+            </p>
+            <p>
+                <span class="font-left"> Input Parameters </span>
+            </p>
+            <form class="form-inline" action="/deletecomment" method="post">
+                <div class="form-group">
+                    <label>userId:</label>
+                    <input type="text" class="form-control" name="userId">
+                </div>
+                <div class="form-group">
+                    <label> commentId:</label>
+                    <input type="text" class="form-control" name="commentId">
+                </div>
+                <span style="padding: 10px">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </span>
+            </form>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">reply on comment Api</h4>
+            <p>
+                <span class="font-left"> Description </span>
+            </p>
+            <p> This API is used to give reply on comment </p>
+            <p>
+                <span class="font-left"> Request Method </span>
+                <span class="font-right"> POST </span>
+            </p>
+            <p>
+                <span class="font-left"> Request URL </span>
+                <span class="font-right"> /reply </span>
+            </p>
+            <p>
+                <span class="font-left"> Input Parameters </span>
+            </p>
+            <form class="form-inline" action="/reply" method="post">
+
+                <div class="form-group">
+                    <label>commentId:</label>
+                    <input type="text" class="form-control" name="commentId">
+                </div>
+                <div class="form-group">
+                    <label>replyText:</label>
+                    <input type="text" class="form-control" name="replyText">
+                </div>
+                <div class="form-group">
+                    <label>repliedBy:</label>
+                    <input type="text" class="form-control" name="repliedBy">
+                </div>
+                <span style="padding: 10px">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </span>
+            </form>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Get all users Api</h4>
+            <p>
+                <span class="font-left"> Description </span>
+            </p>
+            <p> This API is used to gey list of users </p>
+            <p>
+                <span class="font-left"> Request Method </span>
+                <span class="font-right"> Get </span>
+            </p>
+            <p>
+                <span class="font-left"> Request URL </span>
+                <span class="font-right"> /usersList </span>
+            </p>
+            <p>
+                <span class="font-left"> Input Parameters </span>
+            </p>
+            <form class="form-inline" action="/usersList" method="GET">
+                <span style="padding: 10px">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </span>
+            </form>
+        </div>
+    </div>
+</div>
